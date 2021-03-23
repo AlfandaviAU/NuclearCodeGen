@@ -12,7 +12,6 @@ function classic(){
                 z.push(x[i]);
             }
         }
-        document.write(z);
         var res = "https://nhentai.net/search/?q=";
         for (var j=0; j < z.length; j++){
             if (j==0){
