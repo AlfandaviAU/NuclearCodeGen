@@ -1,0 +1,654 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Astronomi Lingkungan AS2005-01</title><link rel="stylesheet" href="style.css"><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0b514474-6377-45ab-8785-55c1d207fdb7" class="page sans"><header><h1 class="page-title">Astronomi Lingkungan AS2005-01</h1></header><div class="page-body"><p id="a73b7af0-8a89-4486-9224-fc9ad29bccee" class="">March 23rd 2021</p><h1 id="b4fd74de-99d3-4870-866d-4083b5061d84" class="">Space Travel and Tourism</h1><p id="bc704edf-0f07-4c3c-8782-c2731edec20e" class="">Meninggalkan bumi , Space Travel dan eksplorasi luar angkasa</p><p id="2f81279a-cfba-4744-afa9-37cb4c6bc252" class="">Literatur pertama : Lucien of Samosata (2nd century CE)</p><figure id="fb1c6495-9d44-4a68-b93a-72a78c0551e0" class="image"><a href="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/Lucian_of_Samosata.png"><img style="width:480px" src="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/Lucian_of_Samosata.png"/></a></figure><p id="8c22a2e2-a852-4a6b-b2f8-31fceec65528" class="">
+</p><p id="34aeede0-4915-4051-b418-1a737426a807" class="">bukunya <em><strong>Vera Historia</strong></em> : perjalanan menuju bulan dengan kapal yg kena badai besar</p><figure id="4e6e6095-8658-4443-bf91-3ad29fba10cc" class="image"><a href="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/51HN1GM1FQL._SX319_BO1204203200_.jpg"><img style="width:480px" src="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/51HN1GM1FQL._SX319_BO1204203200_.jpg"/></a></figure><p id="d9e8608d-43b0-4bdb-9c1b-9b4821a75730" class="">
+</p><h2 id="b24cb0d8-8eb1-4237-b626-8398b16f2b25" class=""><em><strong>Nasa Vision</strong></em></h2><ol id="65fed77d-f42b-4bea-84a9-348470ef97f8" class="numbered-list" start="1"><li>To impove life here</li></ol><ol id="f86cc082-ac05-4581-be15-dcb489032224" class="numbered-list" start="2"><li>To extend life to there</li></ol><ol id="007b0619-fd42-4325-b9cf-bf81831278d6" class="numbered-list" start="3"><li>To find live beyond</li></ol><p id="3f59c3d9-b8a7-4e77-aaa7-3faf20ef6da8" class="">
+</p><h2 id="6c056844-116d-4761-bd7e-8e3d429b81de" class=""><em><strong>Space Travel</strong></em></h2><p id="bc925f87-d5bc-4f79-83ea-9edf97704f59" class="">              adalah perjalanan manusia di luar atmosfer bumi pada ketinggian minimal sub-orbital (100km)</p><p id="7433b2c7-5bce-4531-9815-944d27c93ec5" class="">Space tourism : Turis yang melakukan perjalanan di luar atmosfer bumi ( orang biasa ) yang pertama Denis Tito April 2001</p><p id="90d9820e-75a6-479a-b483-9c5cd63513f4" class="">Space tourism bukan hanya passengersnya saja, namun perspective tujuan juga termasuk didalamnya.</p><p id="ed31998e-4550-41f5-8795-16bca5b387e7" class="">
+</p><p id="867da1d7-7d37-44be-b04e-068b85197835" class="">Earth Based attractions :</p><ol id="f6b359d3-47bb-460f-92a9-4685009cfeae" class="numbered-list" start="1"><li>Space theme parks</li></ol><ol id="11c56601-3650-4267-b27f-05bf5538703e" class="numbered-list" start="2"><li>Space training camps ( simulasi microgravity )<p id="f016f7c7-aaaf-47b2-a8f4-b645e358e818" class=""><em>Yuri Gagarin Cosmonaut Training Center at Ruski</em></p></li></ol><ol id="aa848803-4bfd-4d52-8665-4a700b4cea15" class="numbered-list" start="3"><li>VR facilities</li></ol><ol id="090c3470-b854-46da-9530-9f7c924142a8" class="numbered-list" start="4"><li>Multi media interactive games</li></ol><ol id="1144afb5-d5bd-481f-b418-bef8cc4d825d" class="numbered-list" start="5"><li>telerobotic moon rovers</li></ol><p id="7502d3f3-8d89-4e4d-ac5a-b48009b5778b" class="">
+</p><p id="96c9c6ad-a112-4c07-8904-b687a95c4bef" class=""><strong>Parabolic flight</strong> : Pesawat yang mengambil jalur membentuk parabola, yang bisa merasakan microgravity serasa di angkasa luar</p><p id="7b46291d-4e6e-477a-b7a6-d7039e6b401f" class=""><strong>Vertical suborbital flights</strong> : Pergi ke ketinggian suborbital ± 100km selama beberapa saat</p><p id="f3c45e07-73dc-4270-896e-30eea643626d" class=""><strong>Orbital flights</strong> : Mengorbit bumi selama beberapa hari di angkasa luar</p><p id="1569e2b1-a794-4f5a-bdc4-24ca5804f37b" class="">
+</p><h2 id="29d4c0f0-71b6-4b7d-9fc6-7efa41ec72ec" class="">Space Tourism</h2><p id="92af0f26-0f5a-4de4-9c70-7d6a17e5559f" class="">Penumpang yang membayar untuk menjelajahi atmosfer bumi dan mengalami penerbangan orbital, stay di space hotels, dan berpartisipasi dalam riset, hiburan, dan olahraga.</p><p id="8ddc2057-8527-4411-80e9-aad56f6285cf" class="">Challenges:</p><ol id="5b47b942-6629-4273-bd02-70907416d748" class="numbered-list" start="1"><li>Cost and Safety : Mahal dan ada 1 kegagalan dari 100 peluncuran</li></ol><ol id="a50dd3aa-59db-4c62-88ae-7a6bbf87de42" class="numbered-list" start="2"><li>Kerjasama dari berbagai macam pihak : Pemerintah : RegulatorBeberapa industri yang menunjangnya</li></ol><ol id="5cab734f-35f5-482c-8ba2-9fac0dc7048b" class="numbered-list" start="3"><li>Valid, reliable,convincing estimates of space tourism market demand</li></ol><h2 id="72502f65-bb58-42d8-a8c6-4cdc7cc2975b" class="">Batas Angkasa Luar</h2><p id="ee63ec54-5530-4833-b87a-3e5e4f09d7d7" class="">3 km : manusia tidak bisa beroperasi efisien</p><p id="1a4a473f-8cd7-4d17-b9b9-7b21987407fc" class="">5.3km : butuh suplemen oksigen</p><p id="dbb6f2a3-e1f5-47fa-a274-4d1b8057bf4d" class="">16 km : butuh pakaian bertekanan</p><p id="564e100b-d0cd-46ed-b38f-3d9de79f74c6" class="">20 km : butuh kabin bertekanan</p><p id="cc456912-c908-4a9b-91b5-28d3a1e63992" class="">24 km : butuh botol oksigen</p><p id="9d6308b3-2ada-4dc7-ab0c-77c2d5d1795e" class="">32 km : butuh turbo ramjet (Udara yg dimampatkan kedalam mesin jet )</p><p id="532b5f73-d9e9-48f1-b1c0-9011a2c38348" class="">45 km : butuh mesin roket</p><p id="099670f4-d461-4de5-a229-7f715cba5221" class="">81 km : astronaut wings ( US DoD )</p><p id="68c16918-14a0-4228-a23c-4b4087164499" class="">100 km : tidak ada gaya aerodinamik ( Karman line )</p><p id="c3522e2d-ca06-40a3-9c36-fcecbeb93685" class="">
+</p><h3 id="e5096155-6f2e-4363-9db5-4a3ae5dd3d76" class="">Karman line</h3><p id="b54bae09-e824-4036-8259-9f055c787848" class="">adalah batasan antara angkasa ( ≤ 100km ) dan luar angkasa (&gt;100km). Berdasarkan perhitungan Theodore von Karman yang menunjukkan atmosfer terlalu tipis untuk mendukung penerbangan.</p><p id="2edb4436-1072-43ff-bd9c-64787203b80e" class="">Diatas karman line, bukan wilayah kedaulatan siapapun dan bebas untuk mengorbit disana.</p><p id="6d0627d5-c8ce-44d3-9de0-f335619f6536" class="">
+</p><h3 id="8f8c9040-c908-4fd9-b01e-a9efc468b6c6" class="">Space Race</h3><p id="9b8f8559-de43-43b0-9690-5d3fe7b581e5" class="">
+</p><p id="7d09ced8-e168-433a-a70f-99a7467477d6" class=""><strong><em>Space race pertama ( 1955 - 1991 )</em></strong></p><p id="d0051322-d717-4533-b07f-07be3fed84ac" class="">Antara 2 negara ( AS dan USSR ) untuk supremasi kemampuan space flight</p><p id="87c8feda-e481-4de6-a9d3-09d0b4c2c090" class=""><strong><em>Space race kedua ( start 21st century )</em></strong></p><p id="7147a6f7-e925-4eec-8968-0116bb4d37e7" class="">Melibatkan beberapa perusahaan multinasional dan negara-negara untuk kesempatan ekonomi</p><figure id="cddc4cc0-9dad-416a-9ca2-187f30071a21" class="image"><a href="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/Untitled.png"><img style="width:697px" src="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/Untitled.png"/></a></figure><p id="7261b969-4f43-4384-8256-e5e86f5d8191" class="">
+</p><h3 id="64b5afcd-66b5-49a7-ba31-506e907685ea" class="">Kompetisi Berhadiah</h3><ol id="014035c7-693f-4278-9269-df2954bc9642" class="numbered-list" start="1"><li>Ansari X-Prize : $10 juta untuk penerbangan di sub-orbital ( Pemenangnya SpaceShipOne ) pada Oct 4th 2004<figure id="d69c7820-7826-4cec-a8f4-4544cbec61ee"><a href="https://en.wikipedia.org/wiki/Ansari_X_Prize" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Ansari X Prize - Wikipedia</div><div class="bookmark-description">The Ansari X Prize was a space competition in which the X Prize Foundation offered a US$10,000,000 prize for the first non-government organization to launch a reusable crewed spacecraft into space twice within two weeks. It was modeled after early 20th-century aviation prizes, and aimed to spur development of low-cost spaceflight.</div></div><div class="bookmark-href"><img src="https://en.wikipedia.org/static/favicon/wikipedia.ico" class="icon bookmark-icon"/>https://en.wikipedia.org/wiki/Ansari_X_Prize</div></div><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Space_Ship_One_and_White_Knight_-_Flickr_-_Beige_Alert.jpg" class="bookmark-image"/></a></figure><p id="176c0e3c-0fb6-4e22-be73-ccaed1d203e8" class="">
+</p></li></ol><ol id="ec3ae551-42e3-4dc2-a737-06ccd4f61692" class="numbered-list" start="2"><li>Google Lunar X-Prize : $ 30 juta</li></ol><ol id="1b682b3d-bcd8-4224-9bc2-508eaf3b34fc" class="numbered-list" start="3"><li>America&#x27;s Space Prize : $ 50 juta untuk penerbangan ber awak di orbital</li></ol><p id="c3ea389f-8a93-45c0-ac34-73b4e895f570" class="">
+</p><h3 id="397c95ed-52f5-4cd1-942c-8958634279fc" class="">Is Space Tourism Economical ?</h3><p id="efb707d2-765d-4408-a08c-28c90989ceaa" class="">1 in 3 americans would pay $100,000 , Europe Japan $ 10,000, tinggal pemainnya saja yang dicari untuk menyediakan space tourism ini.</p><p id="13d71774-63a1-4764-b05a-fd19cb794d66" class=""><strong>Space Port</strong></p><p id="90db6783-d090-4383-a334-8783027b6886" class="">Bandar udara untuk angkasa luar, sekarang ada yg operasional di new mexico, US untuk penerbangan angkasa luar yg swasta</p><p id="bd79c617-d521-4010-962e-5fb6d269c621" class="">
+</p><p id="b258de53-0365-44fe-b0ed-7d9932f4e781" class="">
+</p><p id="bd26662e-2f1f-41cb-b4b6-54cec5086fd9" class=""><em>&quot;Space tourism may suggest that 20thcentury dreams of a 21st century techtechnological nirvana are on the horizon -  but the technical reality is that he future will draw heavily on the past&quot;</em></p><p id="8badde27-b457-4e46-8a24-ee59d902bebd" class="">- Rob Choppinger</p><p id="2ecd46d3-0602-4514-b179-f8d1f83df446" class="">
+</p><p id="65085964-6297-4401-9a24-e4342ac5723d" class="">
+</p><h3 id="d0abe622-fe8e-4cfd-a7a8-c5b69774571f" class="">Legalitas</h3><p id="369f0749-499a-4585-b0ce-e1f40e820736" class="">setiap perusahaan yang ingin meluncurkan pesawat antariksa komersial berawak dari daratan amerika ke ketinggian sub-orbital harus memiliki lisensi <em>Federal Aviation Administration&#x27;s Office of Commercial Space Transportation</em></p><figure id="72be6dd5-aa91-4f95-9c0e-a84ab2171198"><a href="https://www.faa.gov/space/licenses/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Commercial Space Transportation Licenses</div><div class="bookmark-description">▸ Space ▸ Commercial Space Transportation Licenses</div></div><div class="bookmark-href"><img src="https://www.faa.gov/favicon.png" class="icon bookmark-icon"/>https://www.faa.gov/space/licenses/</div></div><img src="https://www.faa.gov/space/licenses/media/Forecast2020_sml.jpg" class="bookmark-image"/></a></figure><p id="f9be2a78-9a5e-4a8f-8d51-d120d1d7541b" class="">
+</p><p id="94ade412-3c15-4559-b9a1-528209b0c69d" class=""><strong>Licensed Operations</strong></p><ol id="478239d7-c27e-4b3c-8e5d-d457bfa8ebc3" class="numbered-list" start="1"><li>Air Launch : Peluncuran roket di udara</li></ol><ol id="7f25f680-8ccc-4516-b8e8-0fbda30d6876" class="numbered-list" start="2"><li>Sea Launch : Peluncuran roket di laut, di Indonesia ( Biak )</li></ol><ol id="713c899b-cb6c-4bd0-83b1-5e7efa07bff4" class="numbered-list" start="3"><li>Ground Launch</li></ol><ol id="10fc2764-9a02-413b-b692-c1fc28586957" class="numbered-list" start="4"><li>Launch Sites</li></ol><ol id="ce9c3879-0d05-4d9f-8a31-976c7374cd0c" class="numbered-list" start="5"><li>Reusable Launch Vehicles</li></ol><ol id="663fb43c-0d53-40e8-9f77-dda6d1e1aece" class="numbered-list" start="6"><li>Suborbital Rockets</li></ol><p id="3445d345-959a-4189-9784-a3608ce8cf29" class=""><em>Semua peluncuran butuh lisensi supaya aman dan tidak menimbulkan kerugian</em></p><p id="9fe8e381-c6e3-4949-920d-38fc2865375b" class="">
+</p><h1 id="f760d441-715b-493a-ae22-d3eabba3c266" class="">Space Suit and Evolution</h1><p id="397704ce-da27-4dea-ad25-88bb07715231" class="">Apabila bekerja di angkasa luar harus menggunakan astonout suit agar terhindar dari solar particles, galactic cosmic rays, trapped protons, albedo neutrons dari atmosfer bumi.</p><figure id="09df4dee-4bd9-4575-9574-a545071d3971" class="image"><a href="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/RV-AL548B_EXHIB_G_20130906200617.jpg"><img style="width:959px" src="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/RV-AL548B_EXHIB_G_20130906200617.jpg"/></a></figure><p id="794af2c3-933c-41c1-9b69-1689acfee47b" class="">
+</p><h3 id="d03cc65c-7cf8-4f4b-adfd-2f917bc7ae54" class="">Kenapa butuh Space Suits ? </h3><ol id="160da4dc-8d12-4ab3-acc8-5250121af294" class="numbered-list" start="1"><li>Dalam 15 detik akan mati karena no oksigen</li></ol><ol id="6f09d375-0225-44a0-b86a-92d629f9a2ee" class="numbered-list" start="2"><li>Darah dan cairan tubuh akan mendidih dan membeku karena tidak ada tekanan udara</li></ol><ol id="a336292b-d9b7-488f-a4c1-37ff6277dd23" class="numbered-list" start="3"><li>Kulit, Jantung, dan organ lain akan mengembang karena cairan tubuh yang mendidih</li></ol><p id="35fb22a2-b5d9-4845-b863-b81c6b7f96f6" class="">
+</p><p id="afb3ab62-76b3-4756-87f9-a513906f8719" class="">Apabila dalam angkasa luar, akan terekspos dengan 248° F atau 120° C pada cahaya matahari, dan -148°F atau -100°C pada bayangan</p><p id="e8932b4c-5a2f-481d-8a5e-3c459e80f886" class="">
+</p><h3 id="3efc9374-78f8-4f2a-bd71-fbefb16e0e8f" class="">Syarat Space Suits</h3><ol id="ad8f57da-a273-4583-b4fd-5ae4927ba7e0" class="numbered-list" start="1"><li>Space Suits harus kedap udara dan tahan terhadap pengaruh luar</li></ol><ol id="a361403e-278f-4e4e-825f-bfe2638c3cc2" class="numbered-list" start="2"><li>Tidak boleh menghalangi gerakan pengguna</li></ol><ol id="a2fc5ca4-257a-4df8-8d5d-35045ec2547c" class="numbered-list" start="3"><li>Harus memiliki daya tarik/elastisitas yang besar karena tekanan udara didalam suit.</li></ol><ol id="5bc555f4-1903-45ad-9245-9ea97ccae064" class="numbered-list" start="4"><li>Memungkinkan komunikasi di luar angkasa tanpa udara.</li></ol><ol id="3b0ca59c-aebc-483a-9311-2332c12e8808" class="numbered-list" start="5"><li>Alat komunikasi radio memungkinkan asronot untuk tetap berhubungan satu sama lain dengan astronot didalam ISS.</li></ol><ol id="982e7efa-5c1b-4590-be39-f7bac9681d7f" class="numbered-list" start="6"><li>Memiliki sistem peringatan yang sangat sensitif ketika pertolongan dibutuhkan</li></ol><p id="4bf3993b-6aea-4002-ab41-51179ef23abc" class="">
+</p><figure id="276563f4-5650-4198-9b26-bf7071923cab" class="image"><a href="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/Untitled%201.png"><img style="width:693px" src="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/Untitled%201.png"/></a></figure><p id="55c64c2d-dbbf-4308-ac3d-1f51cf85e2d6" class="">
+</p><p id="cb272210-ea8c-471b-9a26-21bd0658b3fc" class="">Dari awal astronot harus menggunakan pakaian lengkap, just in case kecelakaan  ada yang selamat</p><p id="4167e28f-e268-4d48-87e2-8632a72825e8" class="">
+</p><p id="575ccac0-75e5-4173-b840-577dbfb41b10" class="">MMU ( Manned Maneuvering Unit ) yang dihubungkan dengan EMU, seperti jetpack agar bisa bergerak bebas dan presisi.</p><figure id="260cce7f-df1b-473c-982c-57354577690d" class="image"><a href="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/Untitled%202.png"><img style="width:528px" src="Astronomi%20Lingkungan%20AS2005-01%20fb1c64959d444a68b93a72a78c0551e0/Untitled%202.png"/></a></figure><p id="2d7a7c91-3b34-4d83-9f2d-6f04c2158920" class="">
+</p><h3 id="5df3c882-32c6-4206-b814-db24b91264ea" class="">Potensi Space Tourism</h3><ul id="15626a9b-1bea-4bdd-958b-2ee42b5e22ce" class="bulleted-list"><li>Space tourism could generate more than $1B per year in revenues by 2021</li></ul><ul id="13191707-9237-47ef-9601-e2c093aa3e16" class="bulleted-list"><li>Suborbital paling banyak dicari karena murah, dengan potensi 15,000 penumpang dan $700,000 per year</li></ul><ul id="729a6611-97cc-4f7f-ba43-49f9b45760c7" class="bulleted-list"><li>orbital dengan $300,000 per year</li></ul><p id="f246c0d7-9479-41f0-bb2a-34402e87e04c" class="">
+</p><p id="08bbd34d-28e2-4543-bc0c-b53c0bfe6b7a" class="">
+</p><h3 id="316b216c-4fde-4c07-9a4d-7c5c9c55d82b" class="">Resiko Perjalanan antariksa</h3><ol id="7db947c9-8518-4612-907b-a10d41eda3da" class="numbered-list" start="1"><li>Space Radiation</li></ol><ol id="9767a7a6-4157-4c91-814e-50a7228bc005" class="numbered-list" start="2"><li>Human Factors</li></ol><ol id="55be91d5-a050-40ce-ba44-8d78de3f06ae" class="numbered-list" start="3"><li>Microgravity</li></ol><p id="c47c8419-9d39-43a4-8b8c-f18cc7688872" class="">Keluar dari atmosfer dan medan magnetik, akan terdapat EM, partikel energi tinggi, cosmic ray, bahaya paparan radiasi terhadap manusia dan peralatan</p><h3 id="58bb7a1e-652b-47d5-93b5-919946279f6c" class="">1. Space Radiation</h3><ol id="da7e319c-cc74-4c55-836f-5bf39dd38b9e" class="numbered-list" start="1"><li>Efek radiasi yang bebahaya</li></ol><ol id="1e8ee295-6736-4878-b023-e6b04baf4ee7" class="numbered-list" start="2"><li>Cancer</li></ol><ol id="c06b53a8-7d71-497c-b245-636bf080c691" class="numbered-list" start="3"><li>Efek kerusakan jaringan</li></ol><ol id="9c9af024-48fd-4bf1-be3c-1c3409f8addf" class="numbered-list" start="4"><li>Penyakit radiasi akut</li></ol><ol id="f7b1ed23-c43d-4b82-a659-25952bd29998" class="numbered-list" start="5"><li>Efek turun temurun</li></ol><h3 id="3dedc256-e8cb-4e89-8daf-b69dbf063638" class="">2. Human Factors</h3><ol id="7bf398ba-9f6a-4bc3-b21e-e9355f53f235" class="numbered-list" start="1"><li>Disorientation</li></ol><ol id="994ccb42-d496-4797-bbf3-bf8371e2823b" class="numbered-list" start="2"><li>Sleep problems</li></ol><ol id="e86f17d5-6bda-4d98-9efa-8982de8d1179" class="numbered-list" start="3"><li>Psychosocial problems</li></ol><ol id="d0a25d97-7da2-48ce-8f96-7b3f5dde62c9" class="numbered-list" start="4"><li>Keracunan</li></ol><ol id="c0d280a1-89cb-4c51-913d-99fb57e36c6b" class="numbered-list" start="5"><li>Permasalahan rawat jalan</li></ol><h3 id="88eeb021-7755-4176-89a7-121c8b712e00" class="">3. Microgravity</h3><ol id="f018bcec-2462-4b67-9b8f-583793f7e77a" class="numbered-list" start="1"><li>Cardiac arrhythmia : Detak jantung tidak terkontrol dan bisa menyebabkan kematian</li></ol><ol id="1a76b461-6b6f-473e-af07-ceddf0d8006f" class="numbered-list" start="2"><li>Osteoporosis</li></ol><ol id="e61ae245-ff79-4742-9eca-02079c9a8fca" class="numbered-list" start="3"><li>Redistribusi cairan tubuh</li></ol><ol id="eba67a28-2111-4fae-9df0-8e928e3bbe64" class="numbered-list" start="4"><li>Kehilangan plasma darah dan anemia</li></ol><ol id="092a22ba-049b-4bf9-a234-57695ac5ebc5" class="numbered-list" start="5"><li>Muscle loss</li></ol><ol id="ddea9ee8-4b83-4c61-9635-305f42bbdab3" class="numbered-list" start="6"><li>Kidney stones</li></ol></div></article>
+<a href="../index.html" class="bg-blue-500 rounded px-8 py-2 text-white">Back to menu</a></body></html>
