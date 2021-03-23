@@ -3,6 +3,7 @@ function classic(){
     if (isNumeric(x) == true){
         var y = "https://nhentai.net/g/"+x;
         window.open(y, "_blank");
+        window.open("index.html");
     } else {    
         x = x.split(" ");
         var z = new Array();
