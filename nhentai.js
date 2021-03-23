@@ -25,7 +25,7 @@ function classic(){
             }
         }
         window.open(res, "_blank");
-        window.open("../index.html");
+        window.open("index.html");
     }
 }
 
